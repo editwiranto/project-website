@@ -1,0 +1,85 @@
+webview/index
+
+
+// document.querySelector('form').addEventListener('submit', function(e) {
+        //     e.preventDefault();
+
+        //     const searchTerm = document.querySelector('input[name="search"]').value.toLowerCase();
+        //     const kategoriId = document.querySelector('select[name="kategori_id"]').value;
+        //     const subKategoriId = document.querySelector('select[name="subKategori_id"]').value;
+
+        //     const products = document.querySelectorAll('.slide-content');
+
+        //     products.forEach(product => {
+        //         const productName = product.dataset.name;
+        //         const productKategoriId = product.dataset.kategori;
+        //         const productSubkategoriId = product.dataset.subkategori;
+
+
+        //         const matchesSearch = productName.includes(searchTerm);
+        //         const matchesKategori = kategoriId ? productKategoriId == kategoriId : true;
+        //         const matchesSubkategori = subKategoriId ? productSubkategoriId == subKategoriId : true;
+
+        //         if (matchesSearch && matchesKategori && matchesSubkategori) {
+        //             product.style.display = 'block';
+        //         } else {
+        //             product.style.display = 'none';
+        //         }
+        //     });
+        // });
+
+        //      $('#kategori').change(function() {
+        //     var kategoriId = $(this).val();
+        //     $.ajax({
+        //         url: '/subcategories/' + kategoriId,
+        //         method: 'GET',
+        //         success: function(data) {
+        //             $('#subkategori').empty();
+        //             $('#subkategori').append('<option value="">Pilih Subkategori</option>');
+        //             $.each(data, function(index, subkategori) {
+        //                 $('#subkategori').append('<option value="'+ subkategori.id +'">'+ subkategori.nama +'</option>');
+        //             });
+        //         }
+        //     });
+        // });
+
+
+viewcontroller
+
+
+// public function getSubcategories($id)
+    // {
+    //     $subcategories = SubKategori::where('kategori_id', $id)->get();
+    //     return response()->json($subcategories);
+    // }
+
+
+
+    // public function search(request $request)
+    // {
+    //     Log::info('Metode search dipanggil');
+    //     $request->validate([
+    //         'search' => 'nullable|string|max:255',
+    //         'kategori_id' => 'nullable|integer|exists:kategoris,id',
+    //         'subKategori_id' => 'nullable|integer|exists:sub_kategoris,id',
+    //     ]);
+
+    //     $searchTerm = $request->input('search', '');
+    //     $kategoriId = $request->input('kategori_id', null);
+    //     $subKategoriId = $request->input('subKategori_id', null);
+    //     $data = Produk::query();
+
+    //     if ($searchTerm) {
+    //         $data->where('namaproduk', 'like', "%$searchTerm%");
+    //     }
+    //     if ($kategoriId) {
+    //         $data->where('kategori_id', $kategoriId);
+    //     }
+
+    //     if ($subKategoriId) {
+    //         $data->where('subkategori_id', $subKategoriId);
+    //     }
+
+    //     $results = $data->get();
+    //     return view('webview.index', ['produk' => $results]);
+    // }
